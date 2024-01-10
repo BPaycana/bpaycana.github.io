@@ -6,8 +6,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/95b7b9fd29.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <li><a href ="#">Home</a></li>
+                    <li><a href ="#">About</a></li>
+                    <li><a href ="#">Services</a></li>
+                    <li><a href ="#">Portfolio</a></li>
+                    <li><a href ="#">Contact</a></li>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h1>Hi, I'm <span>Earl Brent Paycana</span> from <br> Sydney, Australia</h1>
+        </div>
+    </div>
+</div>
 
+<!--about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/User.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras in tristique sem. Nulla mollis est et odio imperdiet dignissim. 
+                    Duis et sem rhoncus, rutrum ligula sit amet, dictum sem. Praesent eu elit bibendum, convallis tellus at, auctor elit. 
+                    Phasellus sodales viverra pellentesque. Quisque enim justo, pellentesque a lacinia vitae, molestie eu nibh. 
+                    Donec porttitor fringilla lacus, et laoreet lorem accumsan in. Nam volutpat faucibus orci eget congue.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Experience</p>
+                    <p class="tab-links" onclick="opentab('experience')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Game Developer</span><br>Designing and Developing Video Games</li>
+                        <li><span>Web Developer</span><br>Designing and Developing Websites and Interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020</span><br>Macquarie University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--services-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Game Deisgn & Development</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design & Development</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.    
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+
+            
+                
+            
+        </div>
+    </div>
+</div>
+
+<!--portfolio-->
+<div id="portfolio">
+    <div class="contaioner">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png" alt="">
+                <div class="layer">
+                    <h3>Mobile Game</h3>
+                    <p>Android mobile game app developed using Unity</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-2.png" alt="">
+                <div class="layer">
+                    <h3>VR Experience</h3>
+                    <p>Android mobile game app developed using Unity</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work-3.png" alt="">
+                <div class="layer">
+                    <h3>Mobile Game</h3>
+                    <p>Android mobile game app developed using Unity</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        //Hides the contents of the tab.
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        //Shows the contents of the tab.
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
