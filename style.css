@@ -102,6 +102,12 @@ nav ul li a:hover::after{
     color: white;
 }
 
+.about-col-2 p{
+    font-size: 25px;
+    padding: 5px;
+}
+
+
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
@@ -130,14 +136,22 @@ nav ul li a:hover::after{
     width: 50%;
 }
 
+.tab-contents ul {
+    display: grid;
+    grid-template-columns: 350px;
+    margin-top: 10px;
+}
+
 .tab-contents ul li{
     list-style: none;
-    margin: 10px 0;
+    margin: 14px 0;
+    font-size: 30px;
+    border-radius: 10px;
 }
 
 .tab-contents ul li span{
     color: red;
-    font-size: 14px;
+    font-size: 40px;
 }
 
 .tab-contents{
@@ -193,6 +207,10 @@ nav ul li a:hover::after{
     transform: translateY(-10px);
 }
 
+.services-list p{
+    font-size: 16px;
+}
+
 /*Portfolio*/
 
 #portfolio{
@@ -209,6 +227,7 @@ nav ul li a:hover::after{
 }
 
 .work{
+    border: 3px solid red;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
