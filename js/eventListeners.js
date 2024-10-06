@@ -4,6 +4,10 @@ window.addEventListener('keydown', (event) => {
             if (player.velocity.y === 0) player.velocity.y = playerJumpVelocity
             break
 
+        case ' ':
+            if (player.velocity.y === 0) player.velocity.y = playerJumpVelocity
+            break
+
         case 'a':
             keys.a.pressed = true
             break
